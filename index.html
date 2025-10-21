@@ -6,7 +6,7 @@
 <title>ONLINE.BIZ</title>
 <meta name="robots" content="noindex">
 <style>
-:root{
+:root {
   --top-gap:120px;
   --side-pad:60px;
   --mid-gap:120px;
@@ -16,61 +16,72 @@
   --main-text-w:200px;
   --sub-text-w:290px;
 }
-*{box-sizing:border-box;}
-html,body{height:100%;}
-body{
-  margin:0;
-  background:#0994c2;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: #0994c2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-.page{min-height:100%;display:flex;flex-direction:column;}
-.content{
-  flex:1 0 auto;
-  padding:var(--top-gap) var(--side-pad) var(--bottom-pad);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+.page { min-height: 100%; display: flex; flex-direction: column; }
+.content {
+  flex: 1 0 auto;
+  padding: var(--top-gap) var(--side-pad) var(--bottom-pad);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.logo{
-  width:var(--logo-w);
-  max-width:100%;
-  display:block;
-  height:auto;
-  line-height:0;
+.logo {
+  width: var(--logo-w);
+  max-width: 100%;
+  display: block;
+  height: auto;
+  line-height: 0;
 }
-.mid-gap{height:var(--mid-gap);}
-.stack{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  line-height:0;
+.mid-gap { height: var(--mid-gap); }
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0;
 }
-.stack img{display:block;height:auto;}
-.email{width:var(--email-w);max-width:100%;cursor:pointer;}
-.main-text{width:var(--main-text-w);max-width:100%;}
-.sub-text{width:var(--sub-text-w);max-width:100%;}
+.stack img { display: block; height: auto; }
+.email { width: var(--email-w); max-width: 100%; cursor: pointer; }
+.main-text { width: var(--main-text-w); max-width: 100%; cursor: pointer; }
 @media (max-width:480px){
-  html,body{height:auto;}
-  .content{padding:120px 24px 60px;}
-  img{max-width:90vw;height:auto;}
+  html, body { height: auto; }
+  .content { padding: 120px 24px 60px; }
+  img { max-width: 90vw; height: auto; }
 }
 </style>
 </head>
 <body>
 <main class="page">
-<div class="content">
-  <img class="logo" src="images/logo@2x.png" srcset="images/logo@1x.png 1x, images/logo@2x.png 2x" alt="ONLINE.BIZ">
-  <div class="mid-gap"></div>
-  <div class="stack">
-    <a id="emailLink"><img class="email" src="images/email@2x.png" srcset="images/email@1x.png 1x, images/email@2x.png 2x" alt=""></a>
-    <img class="main-text" src="images/main_text@2x.png" srcset="images/main_text@1x.png 1x, images/main_text@2x.png 2x" alt="For inquiries about this domain, please contact us via email.">
+  <div class="content">
+    <img class="logo" src="images/logo@2x.png"
+         srcset="images/logo@1x.png 1x, images/logo@2x.png 2x"
+         alt="ONLINE.BIZ logo">
+    <div class="mid-gap"></div>
+    <div class="stack">
+      <a id="emailLink">
+        <img class="email" src="images/email@2x.png"
+             srcset="images/email@1x.png 1x, images/email@2x.png 2x"
+             alt="Email icon">
+      </a>
+      <a id="mainTextLink">
+        <img class="main-text" src="images/main_text@2x.png"
+             srcset="images/main_text@1x.png 1x, images/main_text@2x.png 2x"
+             alt="For inquiries about this domain, please contact us via email.">
+      </a>
+    </div>
   </div>
-</div>
 </main>
 <script>
 (function(){
-  const u='domain',d='imagedrome.com';
-  document.getElementById('emailLink').href='mailto:'+u+'@'+d;
+  const u = 'domain';
+  const d = 'imagedrome.com';
+  const mail = 'mailto:' + u + '@' + d;
+  document.getElementById('emailLink').href = mail;
+  document.getElementById('mainTextLink').href = mail;
 })();
 </script>
 </body>
