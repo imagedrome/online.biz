@@ -7,7 +7,7 @@
 
 <meta name="robots" content="index,follow" />
 
-<meta name="description" content="Official domain of ONLINE.BIZ. For inquiries regarding this domain or business opportunities, please contact us via email." />
+<meta name="description" content="ONLINE.BIZ. For inquiries regarding this domain or business opportunities, please contact us via email." />
 <meta name="keywords" content="online, online.biz, domain, business, sale, contact, imagedrome, inquiries" />
 
 <meta property="og:title" content="ONLINE.BIZ Official Domain" />
@@ -90,7 +90,8 @@ body {
 (function(){
   const u = 'domain';
   const d = 'imagedrome.com';
-  const mail = 'mailto:' + u + '@' + d;
+  const subj = '?subject=' + encodeURIComponent('Inquiry from ONLINE.BIZ');
+  const mail = 'mailto:' + u + '@' + d + subj;
   document.getElementById('emailLink').href = mail;
   document.getElementById('mainTextLink').href = mail;
 })();
