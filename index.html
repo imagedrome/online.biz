@@ -106,12 +106,19 @@ body {
 </main>
 <script>
 (function(){
-  const u = 'domain';
-  const d = 'imagedrome.com';
-  const subj = '?subject=' + encodeURIComponent('Inquiry from ONLINE.BIZ');
-  const mail = 'mailto:' + u + '@' + d + subj;
-  document.getElementById('emailLink').href = mail;
-  document.getElementById('mainTextLink').href = mail;
+  const u = 'domain', d = 'imagedrome.com';
+  const subject = 'Inquiry from ONLINE.BIZ';
+  const mail = `mailto:${u}@${d}?subject=${encodeURIComponent(subject)}`;
+
+  const emailLink = document.getElementById('emailLink');
+  const mainTextLink = document.getElementById('mainTextLink');
+
+  [emailLink, mainTextLink].forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.open(mail, '_blank');
+    });
+  });
 })();
 </script>
 </body>
