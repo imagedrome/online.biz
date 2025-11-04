@@ -114,11 +114,13 @@ body {
   const emailLink = document.getElementById('emailLink');
   const mainTextLink = document.getElementById('mainTextLink');
 
+  // assign mailto hrefs dynamically so the raw email is not present in static HTML
+  // clicking the anchor is a user action (avoids Safari's JS-open mail blocking)
   [emailLink, mainTextLink].forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.open(mail, '_blank');
-    });
+    if (!link) return;
+    link.href = mail;
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener');
   });
 })();
 </script>
